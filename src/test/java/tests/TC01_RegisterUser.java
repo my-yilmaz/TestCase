@@ -10,7 +10,7 @@ import pages.AutomationExercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C01_RegisterUser {
+public class TC01_RegisterUser {
     // 1. Launch browser
     //2. Navigate to url 'http://automationexercise.com'
     //3. Verify that home page is visible successfully
@@ -65,13 +65,13 @@ public class C01_RegisterUser {
         actions.click(exercisePage.radioButton).click()
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
-                .sendKeys(ConfigReader.getProperty("password"))
+                .sendKeys(faker.internet().password())
                 .perform();
-        select=new Select(exercisePage.days);
+        select = new Select(exercisePage.days);
         select.selectByVisibleText("12");
-        select=new Select(exercisePage.months);
+        select = new Select(exercisePage.months);
         select.selectByVisibleText("May");
-        select=new Select(exercisePage.years);
+        select = new Select(exercisePage.years);
         select.selectByVisibleText("1990");
         Thread.sleep(1000);
         exercisePage.signUpForOurNewsletterTik.click();
@@ -89,7 +89,7 @@ public class C01_RegisterUser {
                 .sendKeys(Keys.PAGE_DOWN)
                 .perform();
         Thread.sleep(1000);
-        select=new Select(exercisePage.country);
+        select = new Select(exercisePage.country);
         select.selectByVisibleText("United States");
         actions.click(exercisePage.stateKutusu)
                 .sendKeys(faker.address().state())
@@ -113,7 +113,5 @@ public class C01_RegisterUser {
         //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
         //exercisePage.deleteButonu.click();
         // Bu son basamakta site calısmiyor.
-
-
     }
 }
