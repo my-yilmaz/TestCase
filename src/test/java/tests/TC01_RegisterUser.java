@@ -1,11 +1,11 @@
 package tests;
 
 import com.github.javafaker.Faker;
-import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.AutomationExercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -113,5 +113,6 @@ public class TC01_RegisterUser {
         //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
         //exercisePage.deleteButonu.click();
         // Bu son basamakta site calısmiyor.
+
     }
 }

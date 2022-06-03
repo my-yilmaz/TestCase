@@ -75,7 +75,4 @@ public class AutomationExercisePage {
 
     @FindBy(xpath = "//*[text()='Delete']")
     public WebElement deleteButonu;
-
-
-
 }
